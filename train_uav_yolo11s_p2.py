@@ -6,7 +6,6 @@ from pathlib import Path
 
 from ultralytics import YOLO
 
-
 MODEL_CFG = Path("ultralytics/cfg/models/11/yolo11s.yaml")
 PRETRAINED = Path("yolo11s.pt")
 DEFAULT_DATA = Path("datasets/drone_dataset2_augmented/drone_dataset2_augmented.yaml")
@@ -25,7 +24,9 @@ def parse_args():
     parser.add_argument("--name", help="Run name. Defaults to a timestamped YOLO11s experiment name.")
     parser.add_argument("--exist-ok", action="store_true", help="Allow writing to an existing project/name directory.")
     parser.add_argument("--weights", default=PRETRAINED, help="Pretrained YOLO11s weights path or model name.")
-    parser.add_argument("--no-pretrained", action="store_true", help="Train from scratch without loading pretrained weights.")
+    parser.add_argument(
+        "--no-pretrained", action="store_true", help="Train from scratch without loading pretrained weights."
+    )
     parser.add_argument(
         "--resume",
         nargs="?",
