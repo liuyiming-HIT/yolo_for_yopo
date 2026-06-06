@@ -6,7 +6,6 @@ import torch
 
 from ultralytics import YOLO
 
-
 MODEL_CFG = Path("ultralytics/cfg/models/11/yolo11s-p2.yaml")
 
 
