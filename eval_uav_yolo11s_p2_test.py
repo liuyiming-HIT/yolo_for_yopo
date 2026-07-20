@@ -5,7 +5,6 @@ from pathlib import Path
 
 from ultralytics import YOLO
 
-
 DEFAULT_WEIGHTS = Path("runs/detect/uav_yolo11s_p2_20260521_221210/weights/best.pt")
 DEFAULT_DATA = Path("datasets/drone_dataset2_augmented/drone_dataset2_augmented.yaml")
 
